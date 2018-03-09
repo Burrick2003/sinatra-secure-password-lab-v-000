@@ -48,7 +48,7 @@ class ApplicationController < Sinatra::Base
 
   get "/success" do
     if logged_in?
-      erb :account #not success like previous lab
+      erb :success #not success like previous lab
     else
       redirect "/login"
     end
