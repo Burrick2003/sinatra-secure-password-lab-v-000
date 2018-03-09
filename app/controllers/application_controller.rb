@@ -42,13 +42,13 @@ class ApplicationController < Sinatra::Base
         session[:user_id] = user.id
         redirect "/success"
     else
-        redirect "/success"
+        redirect "/failure"
     end
   end
 
   get "/success" do
     if logged_in?
-      erb :success #not success like previous lab
+      erb :success
     else
       redirect "/login"
     end
